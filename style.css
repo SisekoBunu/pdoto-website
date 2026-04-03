@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.platforms a {
+  margin: 8px;
+  padding: 10px 16px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.nav-buttons a {
+  margin: 6px;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.section {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 300px;
+  padding: 10px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background: white;
+  border: none;
+}
