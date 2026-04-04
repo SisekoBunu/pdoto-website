@@ -20,10 +20,9 @@ let currentIndex = 0;
 function changeBackground() {
   const hero = document.querySelector('.hero');
   if (!hero) return;
-
   hero.style.backgroundImage = "url('" + images[currentIndex] + "')";
   currentIndex = (currentIndex + 1) % images.length;
 }
 
-setInterval(changeBackground, 3000);
 changeBackground();
+setInterval(changeBackground, 6000);
