@@ -181,3 +181,16 @@ body {
     -1px  1px 0 #000,
      1px  1px 0 #000;
 }
+
+.platforms {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.platforms .row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
