@@ -206,3 +206,9 @@ body {
   background: rgba(0,0,0,0.25);
   pointer-events: none;
 }
+
+.hero {
+  background-size: cover !important;
+  background-position: center !important;
+  transition: opacity 1s ease-in-out;
+}

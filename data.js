@@ -21,36 +21,21 @@ function changeBackground() {
   const hero = document.querySelector('.hero');
   if (!hero) return;
 
-  // Smooth fade out
-  hero.style.transition = "opacity 1.2s ease-in-out";
   hero.style.opacity = 0.5;
 
   setTimeout(() => {
     hero.style.backgroundImage = "url('" + images[current] + "')";
-    
-    // Fade back in
     hero.style.opacity = 1;
-
-    // Subtle zoom effect (SAFE version)
-    hero.style.backgroundSize = "108%";
-
-    setTimeout(() => {
-      hero.style.backgroundSize = "100%";
-    }, 6000);
-
     current = (current + 1) % images.length;
-
-  }, 600);
+  }, 500);
 }
 
 // Initial load
 document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector('.hero');
   if (!hero) return;
-
   hero.style.backgroundImage = "url('" + images[0] + "')";
-  hero.style.backgroundSize = "100%";
 });
 
-// Slower timing = more cinematic
-setInterval(changeBackground, 8000);
+// Clean timing (no overlap)
+setInterval(changeBackground, 7000);
