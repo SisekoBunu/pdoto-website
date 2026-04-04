@@ -212,3 +212,8 @@ body {
   background-position: center !important;
   transition: opacity 1s ease-in-out;
 }
+
+.hero {
+  background-size: cover;
+  background-position: center;
+}

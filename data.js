@@ -15,7 +15,7 @@ const images = [
   'assets/images/studio-thinking.jpg'
 ];
 
-let current = 0;
+let current = 1; // START FROM NEXT IMAGE
 
 function changeBackground() {
   const hero = document.querySelector('.hero');
@@ -37,5 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
   hero.style.backgroundImage = "url('" + images[0] + "')";
 });
 
-// Clean timing (no overlap)
+// Clean timing
 setInterval(changeBackground, 7000);
