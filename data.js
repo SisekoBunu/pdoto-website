@@ -20,9 +20,15 @@ let currentIndex = 0;
 function changeBackground() {
   const hero = document.querySelector('.hero');
   if (!hero) return;
-  hero.style.backgroundImage = "url('" + images[currentIndex] + "')";
-  currentIndex = (currentIndex + 1) % images.length;
+
+  hero.style.opacity = 0.4;
+
+  setTimeout(() => {
+    hero.style.backgroundImage = "url('" + images[currentIndex] + "')";
+    hero.style.opacity = 1;
+    currentIndex = (currentIndex + 1) % images.length;
+  }, 400);
 }
 
 changeBackground();
-setInterval(changeBackground, 6000);
+setInterval(changeBackground, 7000);
