@@ -15,20 +15,42 @@ const images = [
   'assets/images/studio-thinking.jpg'
 ];
 
-let currentIndex = 0;
+let current = 0;
 
 function changeBackground() {
   const hero = document.querySelector('.hero');
   if (!hero) return;
 
-  hero.style.opacity = 0.4;
+  // Smooth fade out
+  hero.style.transition = "opacity 1.2s ease-in-out";
+  hero.style.opacity = 0.5;
 
   setTimeout(() => {
-    hero.style.backgroundImage = "url('" + images[currentIndex] + "')";
+    hero.style.backgroundImage = "url('" + images[current] + "')";
+    
+    // Fade back in
     hero.style.opacity = 1;
-    currentIndex = (currentIndex + 1) % images.length;
-  }, 400);
+
+    // Subtle zoom effect (SAFE version)
+    hero.style.backgroundSize = "108%";
+
+    setTimeout(() => {
+      hero.style.backgroundSize = "100%";
+    }, 6000);
+
+    current = (current + 1) % images.length;
+
+  }, 600);
 }
 
-changeBackground();
-setInterval(changeBackground, 7000);
+// Initial load
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  hero.style.backgroundImage = "url('" + images[0] + "')";
+  hero.style.backgroundSize = "100%";
+});
+
+// Slower timing = more cinematic
+setInterval(changeBackground, 8000);
